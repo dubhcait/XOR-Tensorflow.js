@@ -1,11 +1,43 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.dom.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.11.4"> </script>
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.dom.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.11.4"
+    ></script>
     <script type="text/javascript" src="sketch.js"></script>
   </head>
   <body>
+    <h1>XOR with Tensorflow.js</h1>
+    <p class="explanation">
+      This is a visual representation of a neural network learning how to
+      differentiate XOR. XOR implements an exclusive or; a true output results
+      if one, and only one, of the inputs to the gate is true. If both inputs
+      are false or both are true, a false output results. XOR represents the
+      inequality function, i.e., the output is true if the inputs are not alike
+      otherwise the output is false. A way to remember XOR is "one or the other
+      but not both".
+    </p>
+    <img src="https://i.imgur.com/0CipUcV.png" />
+
+    <p class="explanation">
+      White is a pridicted True result and Black is a pridicted False result.
+      The initialised model is random so it can take a larger amount of time,
+      depending on chance, for it to generate accurate predictions
+    </p>
+    <p class="left">(0,0)</p>
+    <p class="right">(0,1)</p>
+    <div id="sketch-holder"></div>
+    <p class="left">(0,1)</p>
+    <p class="right">(1,1)</p>
   </body>
 </html>

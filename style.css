@@ -1,0 +1,29 @@
+body{ text-align: center}
+
+h1 {
+  margin: 1em;
+ 
+}
+
+.explanation{
+    width: 50%;
+    margin: 1em auto;
+    
+}
+
+#sketch-holder
+{
+  display: flex;
+  justify-content: center;
+}
+
+.left {
+    display: inline;
+    margin-left: 0%; 
+}
+
+.right{ display: inline;
+    margin-left: 25%; }
+
+    img{ display: block;
+    margin: auto;}

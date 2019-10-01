@@ -11,7 +11,9 @@ const train_xs = tf.tensor2d([[0, 0], [1, 0], [0, 1], [1, 1]]);
 const train_ys = tf.tensor2d([[0], [1], [1], [0]]);
 
 function setup() {
-  createCanvas(400, 400);
+  const canvas = createCanvas(400, 400);
+  canvas.parent('sketch-holder');
+
   cols = width / resolution;
   rows = height / resolution;
 
@@ -28,7 +30,7 @@ function setup() {
 
   // the outputs of one layer are the inputs of the next
   model = tf.sequential();
-  // fully connected layer 
+  // fully connected layer
   let hidden = tf.layers.dense({
     inputShape: [2],
     units: 16,
@@ -82,7 +84,6 @@ function draw() {
     let index = 0;
     for (let i = 0; i < cols; i++) {
       for (let j = 0; j < rows; j++) {
-
         // font inverse the background, grey is an issue though
         let br = y_values[index] * 255;
         fill(br);
